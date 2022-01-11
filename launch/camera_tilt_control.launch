@@ -1,0 +1,17 @@
+<launch>
+    <rosparam file="$(find camera_tilt_control)/config/actuators.yaml" command="load" ns="camera_tilt_control/"/>
+    <rosparam file="$(find camera_tilt_control)/config/joints.yaml" command="load" ns="camera_tilt_control/"/>
+    <rosparam file="$(find camera_tilt_control)/config/transmissions.yaml" command="load" ns="camera_tilt_control/"/>
+    <rosparam file="$(find camera_tilt_control)/config/controllers.yaml" command="load"/>
+
+    <node name="camera_tilt_control_node" pkg="camera_tilt_control" type="camera_tilt_control_node" output="screen"/>
+
+    <node
+        name="controller_spawner"
+        pkg="controller_manager"
+        type="spawner"
+        respawn="false"
+        output="screen"
+        args="joint_state_controller
+            camera_joint_controller" />
+</launch>

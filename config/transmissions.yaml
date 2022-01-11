@@ -1,0 +1,9 @@
+transmissions:
+  transmission_3:
+    joints:
+      - camera_tilt_joint
+    actuators:
+      - g15_camera_joint_actuator
+    type: transmission_interface::SimpleTransmission
+
+

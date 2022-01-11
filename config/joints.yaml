@@ -1,0 +1,4 @@
+joints:
+  camera_tilt_joint:
+    type: PositionControlledJoint
+    default_rpm: 20.0
