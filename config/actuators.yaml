@@ -14,5 +14,5 @@ controllers:
     config:
       g15_camera_joint_controller:
         controller_id: 1
-        port: /dev/ttyACM0
+        port: /dev/g15_camera_tilt
         baud_rate: 115200
